@@ -36,7 +36,7 @@ def get_fruityvice_data(this_fruit_choice):
     return fruityvice_normalized
 
 # New Section to display fruityvice api response
-streamlit.header('International Astronomic Frequene Advice!(This is a API Call fro fruits use => apple for testing)')
+streamlit.header('International Astronomic Frequene Advice!(This is a API Call fro fruits for testing (apple)')
 try:
   fruit_choice = streamlit.text_input('What Frequence would you like information about?')
   if not fruit_choice:
