@@ -2,9 +2,6 @@
 
 import streamlit
 import pandas
-import requests
-import snowflake.connector
-from urllib.error import URLError
 
 streamlit.title('Hallo Herwig das hier ist die Demo Page')
 streamlit.header('This is how the World is swinging')
