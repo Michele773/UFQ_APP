@@ -8,12 +8,12 @@ streamlit.title('Hallo Herwig here is the Demo Page')
 streamlit.header('This is how the World is swinging')
 
 streamlit.header('Frequences are')
-streamlit.text('(here could be some graphics like this)🥣 Planeten')
+streamlit.text('🥣 Planeten')
 streamlit.text('🥗 Instrumente')
 streamlit.text('🥑 Water')
 streamlit.text('🍞 Earth')
 
-streamlit.header('🍌🥭 Build Your Own Frequences Area 🥝🍇')
+streamlit.header('🍌🥭 Build Your Own Frequences Area 🥝(graphics like this)🍇')
 
 # Display the table on the page.
 
