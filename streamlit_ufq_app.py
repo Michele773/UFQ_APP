@@ -36,11 +36,11 @@ def get_fruityvice_data(this_fruit_choice):
     return fruityvice_normalized
 
 # New Section to display fruityvice api response
-streamlit.header('Fruityvice Fruit Advice!')
+streamlit.header('International Astronomic Frequene Advice!')
 try:
-  fruit_choice = streamlit.text_input('What fruit would you like information about?')
+  fruit_choice = streamlit.text_input('What Frequence would you like information about?')
   if not fruit_choice:
-       streamlit.error("Please select a stupid fruit you dummy.")
+       streamlit.error("Please select a Frequence.")
   else:
        back_from_function = get_fruityvice_data(fruit_choice)
        streamlit.dataframe(back_from_function)
