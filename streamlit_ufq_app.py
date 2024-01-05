@@ -8,7 +8,7 @@ streamlit.title('Hallo Herwig here is the Demo Page')
 streamlit.header('This is how the World is swinging')
 
 streamlit.header('Frequences are')
-streamlit.text('🥣 Planeten')
+streamlit.text('(here could be some graphics like this)🥣 Planeten')
 streamlit.text('🥗 Instrumente')
 streamlit.text('🥑 Water')
 streamlit.text('🍞 Earth')
@@ -22,7 +22,7 @@ my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.co
 my_fruit_list = my_fruit_list.set_index('Fruit')
 
 # Let's put a pick list here so they can pick the fruit they want to include 
-fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
+fruits_selected = streamlit.multiselect("Pick some fruits from a csv file:", list(my_fruit_list.index),['Avocado','Strawberries'])
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Display the table on the page.
@@ -36,7 +36,7 @@ def get_fruityvice_data(this_fruit_choice):
     return fruityvice_normalized
 
 # New Section to display fruityvice api response
-streamlit.header('International Astronomic Frequene Advice!')
+streamlit.header('International Astronomic Frequene Advice!(This is a API Call)')
 try:
   fruit_choice = streamlit.text_input('What Frequence would you like information about?')
   if not fruit_choice:
