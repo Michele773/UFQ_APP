@@ -3,8 +3,10 @@
 import streamlit
 import pandas
 import requests
+import snowflake.connector
+from urllib.error import URLError
 
-streamlit.title('Hallo Herwig here is the Demo Page')
+streamlit.title('Hello here is the UFQ Demo Page')
 streamlit.header('This is how the World is swinging')
 
 streamlit.header('Frequences are')
