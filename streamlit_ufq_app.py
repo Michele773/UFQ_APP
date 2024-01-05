@@ -40,7 +40,7 @@ streamlit.header('International Astronomic Frequene Advice!(This is a API Call f
 try:
   fruit_choice = streamlit.text_input('What Frequence would you like information about?')
   if not fruit_choice:
-       streamlit.error("Please select a Frequence.")
+       streamlit.error("Please select a Frequence or a Fruit.")
   else:
        back_from_function = get_fruityvice_data(fruit_choice)
        streamlit.dataframe(back_from_function)
