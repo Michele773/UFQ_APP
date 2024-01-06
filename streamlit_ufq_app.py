@@ -38,7 +38,7 @@ def get_fruityvice_data(this_fruit_choice):
     return fruityvice_normalized
 
 # New Section to display fruityvice api response
-streamlit.header('International Astronomic free Data Frequences Advice!(This is a API Call fro fruits for testing (apple)')
+streamlit.header('International Astronomic free Data Frequences Advice!(This is a API Call fro fruits for testing use (apple)')
 try:
   fruit_choice = streamlit.text_input('What Frequence would you like information about?')
   if not fruit_choice:
@@ -49,4 +49,20 @@ try:
 	   
 except URLerror as e:
       streamlit.error()
+
+#import snowflake.connector
+
+streamlit.header("View Our Fruit List - Add Your Favorites!")
+#Snowflake-related functions
+def get_fruit_load_list():
+  with my_cnx.cursor() as my_cur:
+       my_cur.execute("SELECT * from fruit_load_list")
+       return my_cur.fetchall()
+
+#Add a button to load the fruit
+if streamlit.button('Get Fruit Load List'):
+    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+    my_data_rows = get_fruit_load_list()
+    my_cnx.close()
+    streamlit.dataframe(my_data_rows)
 
